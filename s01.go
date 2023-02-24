@@ -1,14 +1,13 @@
 package structs
 
+
 type User struct {
 	firstName string
 	lastName string
 }
 
-func New(firstName, lastName string) User {
+func New() User {
 	return User{
-		firstName: firstName,
-		lastName: lastName,
 	}
 }
 func ResetUser(user User) {
