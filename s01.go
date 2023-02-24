@@ -5,13 +5,13 @@ type User struct {
 	lastName string
 }
 
-func New(firstName, lastName string) *User {
-	return &User{
+func New(firstName, lastName string) User {
+	return User{
 		firstName: firstName,
 		lastName: lastName,
 	}
 }
-func ResetUser(user *User) {
+func ResetUser(user User) {
 	user.firstName = ""
 	user.lastName = ""
 }
