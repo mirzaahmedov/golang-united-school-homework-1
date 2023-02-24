@@ -7,12 +7,11 @@ type User struct {
 }
 
 func New() User {
-	return User{
-	}
+	return User{}
 }
-func ResetUser(user User) {
-	user.firstName = ""
-	user.lastName = ""
+func ResetUser(user *User) {
+	user.SetFirstName("")
+	user.SetLastName("")
 }
 func IsUser(value interface{}) bool {
 	switch value.(type) {
@@ -22,7 +21,7 @@ func IsUser(value interface{}) bool {
 		return false
 	}
 }
-func ProccessUser(user UserInterface) string {
+func ProcessUser(user UserInterface) string {
 	user.SetFirstName("John")
 	user.SetLastName("Doe")
 
