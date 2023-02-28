@@ -1,3 +1,3 @@
-module github.com/mirzaahmedov/golang-united-school-homework-1
+module github.com/abdukhashimov/io_homework/
 
 go 1.20
