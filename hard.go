@@ -2,7 +2,6 @@ package homework
 
 import (
   "strings"
-  "fmt"
   "io"
 )
 
