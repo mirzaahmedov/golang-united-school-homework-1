@@ -1,8 +1,9 @@
-package homework
+package main
 
 import (
 	"io"
 	"strings"
+        "fmt"
 )
 
 /*
@@ -17,13 +18,9 @@ func SeekTillHalfOfString(strReader *strings.Reader) string {
           return ""
         }
 
-        if len(str) % 2 == 0 {
-          strReader.Seek(int64(len(str)/2), io.SeekStart)
-        } else {
-          strReader.Seek(int64(len(str)/2 + 1), io.SeekStart)
-        }
+        str = str[len(str)/2:]
 
-	return ""
+	return string(str)
 }
 
 /*
@@ -39,7 +36,7 @@ func ReaderSplit(strReader *strings.Reader, n int) []string {
 		return []string{}
 	}
 
-	res := make([]string, len(str)/n+1)
+	res := []string{}
 
 	for i := 0; i < len(str); i += n {
 		res = append(res, string(str[i:i+n]))
